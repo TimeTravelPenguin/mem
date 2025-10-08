@@ -5,7 +5,7 @@
 
 #let template-config = (
   page: (flipped: true, columns: 4, margin: (x: 3mm, y: 1mm)),
-  columns: (gutter: 1em),
+  columns: (gutter: 6mm),
   palette: palette,
   settings: (
     math: (
@@ -16,6 +16,7 @@
   ),
   styles: (
     document-text: (font: "New Computer Modern", size: 6pt),
+    line: (stroke: (paint: palette.heading-block-fill)),
     heading-block: (
       fill: palette.heading-block-fill,
       above: 1em,
@@ -96,7 +97,9 @@
   set columns(..cfg.columns)
   set page(..cfg.page)
   set text(..cfg.styles.document-text)
+  set line(..cfg.styles.line)
 
+  show strong: set text(fill: palette.heading-block-fill)
   show: styalise-math.with(..cfg.settings.math)
   show: styalise-headings.with(..cfg.styles)
 
