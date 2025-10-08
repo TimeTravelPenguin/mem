@@ -365,6 +365,7 @@
 = Inequalities
 
 #theorem(title: "Arithmetic-Geometric Mean Inequality")[
+  #linebreak()
   For positive $x$ and $y$:
   $ 4x y <= (x + y)^2 $
   Notice that by expanding the RHS:
