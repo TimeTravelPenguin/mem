@@ -1,0 +1,12 @@
+[package]
+name = "mem"
+version = "1.0.1"
+compiler = "0.11.0"
+entrypoint = "src/lib.typ"
+repository = "https://github.com/TimeTravelPenguin/mem"
+authors = ["TimeTravelPenguin <TimeTravelPenguin@gmail.com>"]
+license = "MIT"
+description = "A compact and tested Typst template for creating memory sheets for exams."
+keywords = ["template", "styling", "exam", "memory"]
+categories = ["fun", "components"]
+exclude = ["/previews/*"]

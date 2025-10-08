@@ -1,0 +1,18 @@
+[default]
+check-filename = true
+check-file = true
+
+[default.extend-words]
+typ = "typ"
+
+[type.png]
+extend-glob = ["*.png"]
+check-file = false
+
+[type.webp]
+extend-glob = ["*.webp"]
+check-file = false
+
+[type.pdf]
+extend-glob = ["*.pdf"]
+check-file = false
