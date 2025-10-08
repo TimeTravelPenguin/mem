@@ -2,6 +2,8 @@
 
 A compact and tested Typst template for creating memory sheets for exams.
 
+![demo preview](assets/demo.png)
+
 ## About this package
 
 As of creating this repository, I am in my final semester of a double Bachelor's degree
