@@ -122,8 +122,9 @@
 = Basic Definitions
 
 #definition(title: "Inner Product")[
-  An _inner product_ on $V$ is a function that takes each ordered pair $(x,y)$ of
-  elements of $V$ to a number $innerproduct(x, y) in FF$ and, $forall x,y,z in V,lambda in FF$, has the following properties:
+  An _inner product_ on $V$ is a function that takes each ordered pair $(x,y)$ of elements
+  of $V$ to a number $innerproduct(x, y) in FF$ and, $forall x,y,z in V,lambda in FF$, has
+  the following properties:
   #def_list(
     [*Positivity*],
     $innerproduct(y, y) >= 0$,
@@ -177,7 +178,8 @@
 ]
 
 #definition(title: "Open and Closed Balls")[
-  With $(X, norm(#h(0.5mm)dot#h(0.5mm)))$ a normed linear space, with $x_0 in X$, and $r > 0$:
+  With $(X, norm(#h(0.5mm)dot#h(0.5mm)))$ a normed linear space, with $x_0 in X$,
+  and $r > 0$:
   #def_list(
     [*Open Ball*],
     [With centre $x_0$ and radius $r$ as
@@ -221,7 +223,8 @@
 ]
 
 #definition(title: "Geometric Series")[
-  A geometric series (aka "geometric progression") has sequence elements of the form $a_n = a r^n$, where $r$ is the "_common ratio_". The partial sum is given by:
+  A geometric series (aka "geometric progression") has sequence elements of the form
+  $a_n = a r^n$, where $r$ is the "_common ratio_". The partial sum is given by:
   $ s_k = a((1 - r^k)/(1 - r)) $
   and so, given that $abs(r) < 1$, the partial sum limits to:
   $ lim_(n -> oo) sum_(k=1)^n a r^k = a/(1 - r) $
@@ -248,19 +251,24 @@
 ]
 
 #definition(title: "Adjoint Operator")[
-  Let $T:cal(H)_1 -> cal(H)_2$ be a bounded linear mapping between Hilbert spaces. The mapping $T^* : cal(H)_2 -> cal(H)_1$ is called the _adjoint_ of the operator $T$ and, for all $x in cal(H)_1$, $y in cal(H)_2$, is defined:
+  Let $T:cal(H)_1 -> cal(H)_2$ be a bounded linear mapping between Hilbert spaces. The
+  mapping $T^* : cal(H)_2 -> cal(H)_1$ is called the _adjoint_ of the operator $T$ and,
+  for all $x in cal(H)_1$, $y in cal(H)_2$, is defined:
   $ innerproduct(T x, y)_2 = innerproduct(x, T^* y)_1 $
   $T$ is said to be _self-adjoint_ if $T=T^*$.
 ]
 
 #definition(title: "Unitary Operator")[
-  Let $cal(H)$ be a Hilbert space and $U in cal(B)(cal(H))$. We say that $U$ is _unitary_ if $U$ is invertible and $U^(-1) = U^*$. Equivalently, $U U^* = U^* U = I$.
+  Let $cal(H)$ be a Hilbert space and $U in cal(B)(cal(H))$. We say that $U$ is _unitary_
+  if $U$ is invertible and $U^(-1) = U^*$. Equivalently, $U U^* = U^* U = I$.
 ]
 
 #definition(title: "Bounded Linear Operator")[
-  Let $T:X->Y$ be a bounded linear operator between normed linear spaces. The _norm_ of $T$ is defined to be:
+  Let $T:X->Y$ be a bounded linear operator between normed linear spaces. The _norm_ of
+  $T$ is defined to be:
   $ norm(T) = inf{M > 0 : forall x in X, norm(T x) <= M norm(x)} $
-  Note that $norm(T x) <= norm(T) norm(x)$ and $norm(T)$ is the smallest $M$ such that this is valid.
+  Note that $norm(T x) <= norm(T) norm(x)$ and $norm(T)$ is the smallest $M$ such that
+  this is valid.
 ]
 
 #proposition[
@@ -269,7 +277,8 @@
 ]
 
 #definition(title: "Normal Operator")[
-  $T in cal(L)(V)$ is _normal_ if $T T^* = T^* T$. Furthermore, $T$ is normal if and only if $norm(T v)=norm(T^* v)$.
+  $T in cal(L)(V)$ is _normal_ if $T T^* = T^* T$. Furthermore, $T$ is normal if and only
+  if $norm(T v)=norm(T^* v)$.
 ]
 
 #example(title: "Orthogonal Sets")[
@@ -299,7 +308,8 @@
 = Spectral Theory
 
 #theorem(title: "Normal Operator Eigenvectors")[
-  Suppose $T in cal(L)(V)$ is normal. Then, eigenvectors of $T$ corresponding to distinct eigenvalues are orthogonal.
+  Suppose $T in cal(L)(V)$ is normal. Then, eigenvectors of $T$ corresponding to distinct
+  eigenvalues are orthogonal.
 ]
 
 #theorem(title: "Real Spectral Theorem")[
@@ -321,17 +331,24 @@
 ]
 
 #theorem(title: "Diagonalisation")[
-  A square $n times n$ matrix, $A$, with entries in a field $FF$ is called diagonalisable or non-defective if there exists an $n times n$ invertible matrix (i.e. an element of the general linear group $"GL"_n (FF)$), $P$, such that $P^(-1) A P$ is a diagonal matrix.
+  A square $n times n$ matrix, $A$, with entries in a field $FF$ is called diagonalisable
+  or non-defective if there exists an $n times n$ invertible matrix (i.e. an element of
+  the general linear group $"GL"_n (FF)$), $P$, such that $P^(-1) A P$ is a diagonal
+  matrix.
 
-  Given that $Lambda$ is diagonal matrix with eigenvalue entries of $A$ on the main diagonal, then $A P = P Lambda$ implies that $P = V$, the matrix whose columns are eigenvectors to $A$, corresponding to the eigenvalue in the same column of $Lambda$. In this case:
-  $ A = V Lambda V^(-1) $
+  Given that $Lambda$ is diagonal matrix with eigenvalue entries of $A$ on the main
+  diagonal, then $A P = P Lambda$ implies that $P = V$, the matrix whose columns are
+  eigenvectors to $A$, corresponding to the eigenvalue in the same column of $Lambda$. In
+  this case: $ A = V Lambda V^(-1) $
+
   Note that one of the _spectral theorems_ may guarantee the existence of $Lambda$.
 ]
 
 = Function Spaces
 
 #definition(title: "Lebesgue Spaces")[
-  Given two measurable functions $f$ and $g$, we say that $f tilde g$ if $f = g$ _almost everywhere_.
+  Given two measurable functions $f$ and $g$, we say that $f tilde g$ if $f = g$ _almost
+    everywhere_.
 
   For $1 <= p < oo$:
   $
@@ -418,18 +435,18 @@
 ]
 
 #theorem(title: "Parseval Equality")[
-  With $f in cal(H)$ and ${e_n}_(n=1)^oo$ an orthonormal basis for $cal(H)$, then for $cal(F):cal(H)->ell^2 (NN)$:
+  With $f in cal(H)$ and ${e_n}_(n=1)^oo$ an orthonormal basis for $cal(H)$, then for
+  $cal(F):cal(H)->ell^2 (NN)$:
   $ (cal(F) f)_n = innerproduct(f, e_n) $
   is unitary. Furthermore, we have
-  $
-    innerproduct(f, g)_(cal(H)) = innerproduct(cal(F) f, cal(F) g)_(ell^2)
-  $
+  $ innerproduct(f, g)_(cal(H)) = innerproduct(cal(F) f, cal(F) g)_(ell^2) $
 ]
 
 #theorem(title: "Plancherel Equality")[
   With $f in cal(H)$ and ${e_n}_(n=1)^oo$ an orthonormal basis for $cal(H)$:
   $
-    norm(f)^2_(cal(H)) = sum_(n=1)^oo abs(innerproduct(f, e_n))^2 = norm(cal(F) f)^2_(ell^2)
+    norm(f)^2_(cal(H)) = sum_(n=1)^oo abs(innerproduct(f, e_n))^2
+    = norm(cal(F) f)^2_(ell^2)
   $
 ]
 
@@ -441,7 +458,8 @@
 #definition(title: [$L^1$ Fourier Transform])[
   For $f in L^1 (RR)$, the *Fourier Transform* $hat(f)$ of $f$ is defined:
   $
-    cal(F) f(xi) = hat(f)(xi) = integral_(-oo)^oo f(t) e^(-2 pi i xi t) dif t quad (xi in RR)
+    cal(F) f(xi) = hat(f)(xi)
+    = integral_(-oo)^oo f(t) e^(-2 pi i xi t) dif t quad (xi in RR)
   $
 ]
 
@@ -481,7 +499,8 @@
 #proposition(title: "Properties")[
   With $cal(F)$ and $cal(F)^(-1)$ defined on $L^2 (RR)$, then:
   - $cal(F)$ and $cal(F)^(-1)$ are linear operators.
-  - $cal(F)$ and $cal(F)^(-1)$ are unitary operator on $L^2 (RR)$, and so for all $f, g in L^2 (RR)$
+  - $cal(F)$ and $cal(F)^(-1)$ are unitary operator on $L^2 (RR)$,
+    and so for all $f, g in L^2 (RR)$
     $ innerproduct(hat(f), hat(g)) = innerproduct(f, g) $
     Equivalently, $cal(F)^* = cal(F)^(-1)$.
 ]
@@ -523,7 +542,8 @@
 #proposition(title: "Properties")[
   - Each operator has an inverse, as follows:
     $
-      tau_(t_0)^(-1) = tau_(-t_0) quad M_(xi_0)^(-1) = M_(-xi_0) quad D_a^(-1) = D_(a^(-1))
+      tau_(t_0)^(-1) = tau_(-t_0) quad M_(xi_0)^(-1)
+      = M_(-xi_0) quad D_a^(-1) = D_(a^(-1))
     $
 
   - Each operator is unitary.
@@ -564,7 +584,9 @@
 
 #theorem(title: "Heisenberg Uncertainty Inequality")[
   $
-    integral_(-oo)^oo (t - t_0)^2 abs(f(t))^2 dif t dot integral_(-oo)^oo (xi - xi_0)^2 abs(hat(f)(xi))^2 dif xi >= (norm(f)^4_2)/(16 pi^2)
+    integral_(-oo)^oo (t - t_0)^2 abs(f(t))^2 dif t
+    dot integral_(-oo)^oo (xi - xi_0)^2 abs(hat(f)(xi))^2 dif xi
+    >= (norm(f)^4_2)/(16 pi^2)
   $
 ]
 
@@ -575,7 +597,8 @@
 #definition(title: "Short-Time Fourier Transform")[
   Let $phi in L^2 (RR)$. Given $b, xi in RR$, let
   $ phi_(b, xi) (t) = M_(-xi) tau_b phi(t) = e^(2 pi i xi t) phi(t - b) $
-  Then the short-time Fourier transform $S_phi f$ of $f$ with respect to $phi$ is defined by
+  Then the short-time Fourier transform $S_phi f$ of $f$ with respect to $phi$ is defined
+  by
   $ S_phi f(b, xi) = innerproduct(f, phi_(b, xi)) $
 ]
 
@@ -601,7 +624,8 @@
 #theorem[
   If $f in L^2 (RR)$, then $S_phi : L^2 (RR) -> L^2 (RR^2)$ is a _multiple of an isometry_
   $
-    integral_(-oo)^oo integral_(-oo)^oo abs(S_phi f(b, xi))^2 dif b dif xi = norm(phi)_2^2 integral_(-oo)^oo abs(f(t))^2 dif t = norm(phi)_2^2 norm(f)_2^2
+    integral_(-oo)^oo integral_(-oo)^oo abs(S_phi f(b, xi))^2 dif b dif xi
+    = norm(phi)_2^2 integral_(-oo)^oo abs(f(t))^2 dif t = norm(phi)_2^2 norm(f)_2^2
   $
 ]
 
