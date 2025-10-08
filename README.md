@@ -1,6 +1,6 @@
 # mem
 
-A compact and tested Typst template for creating memory sheets for exams.
+A compact and tested Typst package for creating memory sheets for exams.
 
 ![demo preview](assets/demo.png)
 
