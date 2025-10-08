@@ -1,1 +1,2 @@
 *.pdf
+!examples/fourier_analysis.pdf
