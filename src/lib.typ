@@ -106,11 +106,11 @@
   it
 }
 
-#let student-info(..args) = {
+#let student-info(..args, width: auto) = {
   set list(marker: [])
 
   let info = block(
-    width: 99%,
+    width: width,
     inset: (y: 1mm, right: 1mm),
     radius: 3pt,
     fill: white,
